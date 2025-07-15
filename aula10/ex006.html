@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos DOM</title>
     <style>
+
+      * {
+        margin-bottom: 20px;  
+      }
+
+
       div#area {
         font: normal 20pt arial;
         background-color: green;
@@ -14,6 +20,17 @@
         text-align: center;
         line-height: 200px;
       }
+
+      div#espaco {
+        font: normal 20pt arial;
+        background-color: #078ce4;
+        color: white;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+      }
+
     </style>
     
 </head>
@@ -25,9 +42,12 @@
     Interaja...
  </div>
 
+  <div id="espaco">
+    Interaja...
+ </div>
+
  <script>
   
-
   function clicar() {
     var a = document.getElementById('area')
     a.innerText = 'Clicou!'
@@ -46,6 +66,33 @@
   }
 
  </script>
+
+
+  <script>
+    var b = document.getElementById('espaco')
+
+    b.addEventListener('click', clicar2)
+    b.addEventListener('mouseenter', entrar2)
+    b.addEventListener('mouseout', sair2)
+
+    function clicar2() {
+      b.innerText = 'Clicou!'
+      b.style.background = 'red'
+    }
+
+    function entrar2() {
+      b.innerText = 'Entrou!'
+
+    }
+
+    function sair2() {
+      b.innerText = 'Saiu!'
+      b.style.background = '#078ce4'
+    }
+    
+  </script>
+
+
 
 
 </body>
