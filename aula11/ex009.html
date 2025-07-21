@@ -21,12 +21,12 @@
             var nacio = document.querySelector('input#nacio')
             var res = document.querySelector('div#res')
 
-            res.innerHTML = `<p>Você disse que seu país de origem é ${nacio.value}.</p>`
+            res.innerHTML = `<p>Você disse que seu país de origem é: <strong>${nacio.value}</strong>.</p>`
 
             if (nacio.value != 'Brasil') {
-               res.innerHTML += `Você é Estrangeiro`
+               res.innerHTML += `Você é Estrangeiro.`
             } else {
-                res.innerHTML += `Você é Brasileiro`
+                res.innerHTML += `Você é Brasileiro.`
             }
             
     }
