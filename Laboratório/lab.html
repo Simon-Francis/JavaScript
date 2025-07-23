@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gráficos de Gastos</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    .grafico-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .grafico-wrapper {
+      width: 200px;
+      height: 200px;
+      position: relative;
+    }
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  </style>
+</head>
+<body>
+  <h2>💉 Gastos com Exames por Local</h2>
+  <div class="grafico-container">
+    <div class="grafico-wrapper"><canvas id="UBS-Divino"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Coqueiral-de-Itaparica"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Jaburuna"></canvas></div>
+
+    <div class="grafico-wrapper"><canvas id="UBS-Praia-das-Gaivotas"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Aracas"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Ibes"></canvas></div>
+
+    <div class="grafico-wrapper"><canvas id="UBS-Jardim-Colorado"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Vila-Nova"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Ataide"></canvas></div>
+
+    <div class="grafico-wrapper"><canvas id="UBS-Dom-Joao-Batista"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Paul"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Santa-Rita"></canvas></div>
+
+    <div class="grafico-wrapper"><canvas id="UBS-Vila-Garrido"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Vila-Batista"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Jardim-Marilanda"></canvas></div>
+
+    <div class="grafico-wrapper"><canvas id="UBS-Vale-Encantado"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Barra-do-Jucu"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Barramares"></canvas></div>
+
+    <div class="grafico-wrapper"><canvas id="UBS-Jabaete"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Morada-da-Barra"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Ponta-da-Fruta"></canvas></div>
+
+    <div class="grafico-wrapper"><canvas id="UBS-Terra-Vermelha"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Jardim-Marilanda"></canvas></div>
+    <div class="grafico-wrapper"><canvas id="UBS-Ulisses-Guimaraes"></canvas></div>
+  </div>
+
+  <script>
+    function criarGrafico(id, titulo, dados) {
+      new Chart(document.getElementById(id), {
+        type: 'pie',
+        data: {
+          labels: Object.keys(dados),
+          datasets: [{
+            data: Object.values(dados),
+            backgroundColor: ['#FF6384','#36A2EB','#FFCE56','#4BC0C0','#9966FF']
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            title: {
+              display: true,
+              text: titulo,
+              font: {
+                    size: 25
+                }
+            },
+            legend:{
+                display:false,
+                
+            }
+          }
+        }
+      });
+    }
+
+    criarGrafico("UBS-Divino", "UBS Divino", {
+      "Colesterol": 3000,
+      "Glicemia": 4000
+    });
+    criarGrafico("UBS-Coqueiral-de-Itaparica", "UBS Coqueiral de Itaparica", {
+      "Colesterol": 2500,
+      "Glicemia": 3000,
+    });
+    criarGrafico("UBS-Jaburuna", "UBS Jaburuna", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Praia-das-Gaivotas", "UBS Praia das Gaivotas", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Aracas", "UBS Aracas", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Ibes", "UBS Ibes", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Jardim-Colorado", "UBS Jardim Colorado", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Vila-Nova", "UBS Vila Nova", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Ataide","UBS Ataide", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Dom-Joao-Batista","UBS Dom Joao Batista", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Paul","UBS Paul", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Santa-Rita","UBS Santa Rita", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Vila-Garrido","UBS Vila Garrido", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Vila-Batista","UBS Vila Batista", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Jardim-Marilanda","UBS Jardim Marilanda", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Vale-Encantado","UBS Vale Encantado", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Barra-do-Jucu","UBS Barra do Jucu", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Barramares","UBS Barramares", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Jabaete","UBS Jabaete", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Morada-da-Barra","UBS Morada da Barra", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Ponta-da-Fruta","UBS Ponta da Fruta", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Terra-Vermelha","UBS Terra Vermelha", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+    criarGrafico("UBS-Jardim-Marilanda","UBS Jardim Marilanda", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+
+    criarGrafico("UBS-Ulisses-Guimaraes","UBS Ulisses Guimaraes", {
+      "Colesterol": 4000,
+      "Glicemia": 1800
+    });
+  </script>
+</body>
+</html>
