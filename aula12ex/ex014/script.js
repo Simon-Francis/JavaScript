@@ -3,9 +3,9 @@ function carregar() {
     var img = document.getElementById('imagem')
 
     var data = new Date()
-    //var hora = data.getHours()
+    var hora = data.getHours()
 
-    var hora = 19
+    //var hora = 19
 
     msg.innerHTML = `Agora são ${hora} horas`
 
