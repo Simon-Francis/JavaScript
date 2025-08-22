@@ -1,9 +1,17 @@
 
+var f = document.querySelector('div#fim')
+var p = document.querySelector('div#pa')
+
 function contar() {
-var i = document.getElementById('in')
-var f = document.getElementById('fim')
-var p = document.getElementById('pa')
+
+
+
+
+for (var i = document.querySelector('div#in'); i<f, i+p) {
+    
+}
 
 }
 
-res.inner
+res.innerHTML = `gbvnb`
+
