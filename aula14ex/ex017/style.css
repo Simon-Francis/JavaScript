@@ -24,15 +24,13 @@
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.418);
         }
 
-        div#oi {
-            
-            
+        div#res {
+            background-color: white;
+            width: 15%;
+            height: 250px;
+            border: 1px solid black;
+            margin-top: 10px;
         }
-
-        div#io {
-            
-        }
-
         
 
         footer {
