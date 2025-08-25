@@ -12,6 +12,7 @@
         header {
             text-align: center;
             font-size: 2em;
+            color: white;
             
         }
 
@@ -26,14 +27,19 @@
 
         div#res {
             background-color: white;
-            width: 15%;
-            height: 250px;
+            padding: 5px;
+            width: auto;
+            display: inline-block;
             border: 1px solid black;
             margin-top: 10px;
         }
         
+        p {
+            margin: auto;
+        }
 
         footer {
-           margin-top: 10px;
+            margin-top: 10px;
             text-align: center;
+            color: white;
         }
