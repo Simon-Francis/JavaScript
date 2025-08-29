@@ -16,7 +16,7 @@
         }
 
         section {
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(221, 247, 221);
             border-radius: 10px;
             padding: 15px;
             width: 500px;
@@ -24,13 +24,13 @@
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.418);
         }
 
-        div#val {
-            background-color: white;
-            padding: 5px;
-            width: auto;
-            display: inline-block;
-            border: 1px solid rgba(0, 0, 0, 0.288);
-            margin-top: 10px;
+        div#oi {
+            
+            
+        }
+
+        div#io {
+            
         }
 
         
