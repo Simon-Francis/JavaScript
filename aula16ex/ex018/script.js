@@ -24,8 +24,8 @@ function inLista(n, l) {
 
 function adicionar() {
     if(isNumero(num.value) && !inLista(num.value, valores)) {
-        alert(`Tudo Ok!`)
-} else {
+        
+    } else {
     window.alert(`Valor inválido ou já encontrado na lista.`)
 }
 }
